@@ -1,27 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,400;1,600;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  font-family: 'Lora', serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.background-image {
+  background: rgba(0,0,0,0.5) url("https://res.cloudinary.com/dac48s3os/image/upload/v1689106966/Explorer75/herolondon_ytfsqp.jpg") no-repeat center;
+  background-blend-mode: darken;
+  background-size:cover;
+  width: 100vw;
+}
+
+.menu-navigate {
+  @apply
+  cursor-pointer
+  hover:text-blue-400
+  hover:scale-110
+}
+
+.facility {
+  @apply
+  rounded-2xl
+  border-blue-800
+  border-solid
+  border-4
+  bg-blue-300
+  px-8
+  text-2xl
+  hover:bg-blue-200
+  hover:scale-110
+  cursor-pointer
+}
+
+.text-underline {
+  text-decoration: underline;
 }
